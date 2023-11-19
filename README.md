@@ -12,4 +12,4 @@ This project includes three samples from my Applied Data Analytics course in Fal
 | owner_spend_date | card_no   | date   | spend   | trans   | items   |
 | owners | card_no | zip   | plus_2   | status   | date_joined   |
 
- 
+In addition to use SQLite, this project interacts with Google Big Query and Python in sample 2 and 3 respectively. 
