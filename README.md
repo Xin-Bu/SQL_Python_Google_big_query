@@ -4,7 +4,7 @@ This is a collection of my sample SQL files.
 This project includes three samples from my Applied Data Analytics course, one of the core courses from my Master of Business Analytics Program at the University of Montana. The dataset has a total of 38,838 rows and five tables. The five tables are: date_hour, department_date, departments, owner_spend_date, and owners. The variables in each table are listed as below:
 
 
-| Table_name | variable_1 | variable_2 | variable_3 | variable_4 | variable_5 | 
+| table_name | variable_1 | variable_2 | variable_3 | variable_4 | variable_5 | 
 | :---:   | :---: | :---: | :---: | :---: | :---: |    
 | date_hour | date   | hour   | spend   | trans   | items   |
 | department_date | date   | department   | spend   | trans   | items   |
