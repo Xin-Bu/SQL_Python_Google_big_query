@@ -6,7 +6,11 @@ This project includes three samples from my Applied Data Analytics course in Fal
 
 | Table Name | variable_1 | variable_2 | variable_3 | variable_4 | variable_5 | 
 | :---:   | :---: | :---: | :---: | :---: | :---: |    
-| Seconds | 301   | 283   | 301   | 283   | 283   |
+| date_hour | date   | hour   | spend   | trans   | items   |
+| department_date | 301   | 283   | 301   | 283   | 283   |
+| departments | 301   | 283   | 301   | 283   | 283   |
+| owner_spend_date | 301   | 283   | 301   | 283   | 283   |
+| owners | 301   | 283   | 301   | 283   | 283   |
 
 The five variables in the table date_hour are date, hour, spend, trans, and items. 
 
