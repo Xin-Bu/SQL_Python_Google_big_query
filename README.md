@@ -7,6 +7,7 @@ This project includes three samples from my Applied Data Analytics course in Fal
 | Table Name | variable_1 | variable_2 | variable_3 | variable_4 | variable_5 | 
 | :---:   | :---: | :---: | :---: | :---: | :---: |    
 | Seconds | 301   | 283   | 301   | 283   | 283   |
+
 The five variables in the table date_hour are date, hour, spend, trans, and items. 
 
 The five variables in department_date are date, department, spend, trans, and items.
