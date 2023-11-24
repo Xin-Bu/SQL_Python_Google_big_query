@@ -12,4 +12,4 @@ This project includes three samples from my Applied Data Analytics course. This 
 | owner_spend_date | card_no   | date   | spend   | trans   | items   |
 | owners | card_no | zip   | plus_2   | status   | date_joined   |
 
-The code was written in SQLite. In addition, sql in this project interacts with Google Big Query (GBQ) and Python in samples 2 and 3 respectively. 
+The code was written in SQLite. In addition, SQL in this project interacts with Google Big Query (GBQ) and Python in samples 2 and 3 respectively. 
