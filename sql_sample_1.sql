@@ -54,9 +54,9 @@ LIMIT 3
 
 -- Query 5
 -- Using the temporary table "owner_year_month" and the "owners" table, we return the average
--- spend by month across all years for owners who lived in the 55405 zip code, including four columns in 
+-- spend by month across all years for owners who live in the 55405 zip code, including four columns in 
 -- our output. We include month, as well as one column of average sales for each of the zip codes we found 
--- from the previous query. We name the results "avg_spend_55405". Additionally, we joint two CTEs to append
+-- from the previous query. We name the results "avg_spend_55405". Additionally, we join two CTEs to append
 -- the columns holding the average sales for the two zips that are not 55405. 
 
 WITH cte_1 AS (
@@ -180,7 +180,7 @@ WHERE card_no = "18736";
 -- 3. They have at least 270 shopping dates.
 -- 4. Their last visit was at least 60 days before 2017-01-31.
 -- 5. Their last spend was greater than $10
--- The results are ordered by the drop in spend, from the largest drop to smallest, and total spend. 
+-- The results are ordered by the drop in spend, from the largest drop to smallest, and the total spend. 
 
 SELECT *
 FROM  owner_recent
