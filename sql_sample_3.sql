@@ -1,5 +1,5 @@
--- In this sample, we will use SQL_Wedge.db database.  
--- then our SQL queries will interact with Python code. 
+-- In this sample, we'll use SQL_Wedge.db database for the queries.  
+-- Our SQL queries will later interact with Python code. 
 -- We'll have a total of 10 queries (from 21-30) in this sample. 
 
 -- Query 21
@@ -10,10 +10,10 @@
 
 -- Query 22
 -- We use the table "owner_spend_date" to find some specific shopping days. We set the following criteria:
--- 1.For owners who spent more than $10,000 in 2017, return the amount of their maximum spend inthat year. 
+-- 1.For owners who spent more than $10,000 in 2017, return the amount of their maximum spend in that year. 
 -- 2.Return the columns card_no and spend.
 -- 3.Order the results by spend, descending.
--- 4.Exclude card number 3.
+-- 4.Exclude card_no 3.
 
  FROM owner_spend_date
  SELECT card_no,
@@ -31,7 +31,7 @@
 -- 1.The department number is not 1 or 2.
 -- 2.The spend on the day for the department is between $5,000 and $7,500.
 -- 3.The month is May, June, July, or August.
--- 4.Order your results by spend, decreasing.
+-- 4.Order our results by spend, decreasing.
 
  SELECT *
  FROM department_date
@@ -45,7 +45,7 @@
 -- We use the tables date_hour and department_date and write a query that returns department spend during the busiest months. 
 -- We use date_hour to determine the months with the four highest spends. 
 -- Then we use department_date to return the department spend in departments during these months. 
--- Our query returns the year, the month, the total store spend (from date_hour ), the department, and the department spend. 
+-- Our query returns the year, the month, the total store spend (from date_hour), the department, and the department spend. 
 -- We arrange our results ascending for year and month and descending for department spend. 
 -- We limit our results to departments with over $200,000 spend in the month.
 
@@ -110,8 +110,8 @@ dept_spend AS (
 -- Query 27.1
 -- We write a query against the owners table that returns zip code, number of active owners,
 -- number of inactive owners, and the fraction of owners who are active. 
--- We restrict your results to zip codes that have at least 50 owners. 
--- We order your results by the number of owners in the zip code.
+-- We restrict our results to zip codes that have at least 50 owners. 
+-- We order our results by the number of owners in the zip code.
 -- This is the first solution.
 
 SELECT zip,
@@ -156,11 +156,11 @@ cte_2 AS(SELECT zip,
        o.zip IS NOT NULL
  ORDER BY num_owners DESC
 
--- Queries 28-30 are written in Python code.
+-- Queries 28-30 are written in Python.
 
 -- Query 28 Create a table
--- We use the Python library sqlite3 and write Python code that opens a connection to a database called owner_prod.db. 
--- We create a cursor to that database. Use the cursor to create a table called owner_products in the database 
+-- We use the Python library sqlite3 and write code that opens a connection to a database called owner_prod.db. 
+-- We create a cursor to that database. We use the cursor to create a table called owner_products in the database 
 -- with the following columns and data types:
 -- owner: integer
 -- upc: integer
@@ -170,7 +170,7 @@ cte_2 AS(SELECT zip,
 -- items: integer
 -- trans: integer
 
--- Connecting to a database
+-- Connect to a database
 db= sqlite3.connect("owner_prod.db")
 cur = db.cursor()
 -- Create a table
