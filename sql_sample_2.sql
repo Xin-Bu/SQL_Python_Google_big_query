@@ -1,5 +1,5 @@
--- In this sample, we first create, fill, update, and delete the table,  
--- then interact with the table in Google Big Query (GBQ)
+-- In this sample, we'll first create, fill, update, and delete the table,  
+-- then interact with the table in Google Big Query (GBQ).
 -- We'll have a total of 10 queries (from 11-20) in this sample. 
 
 -- Query 11
@@ -14,7 +14,7 @@ description TEXT,
 sales NUMERIC)
 
 -- Query 12
--- We insert the following rows in our table"product_summary":
+-- We insert the following rows in our table "product_summary":
 -- year description sales
 -- 2014 BANANA Organic 176818.73
 -- 2015 BANANA Organic 258541.96
@@ -89,7 +89,7 @@ LIMIT 10
 -- Query 17
 -- We query a series of tables using the wildcard operator. We write a query against the table
 -- "umt-msba.transactions.transArchive_201001_201003" with the following columns:
--- 1. The total number of rows, which you can get with COUNT(*)
+-- 1. The total number of rows, which we can get with COUNT(*)
 -- 2. The number of unique card numbers
 -- 3. The total "spend". This value is in a field called total
 -- 4. The number of unique product descriptions ( description )
