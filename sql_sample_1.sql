@@ -1,4 +1,4 @@
--- In this sample, we will use the tables "owner_spend_date" and "owners". 
+-- In this sample, we'll use the tables "owner_spend_date" and "owners" for the queries. 
 -- We'll have a total of 10 queries (from 11-20) in this sample. 
 
 -- Query 1
@@ -55,7 +55,7 @@ LIMIT 3
 -- Query 5
 -- Using the temporary table "owner_year_month" and the "owners" table, we return the average
 -- spend by month across all years for owners who live in the 55405 zip code, including four columns in 
--- our output. We include month, as well as one column of average sales for each of the zip codes we found 
+-- our output. We include month as well as one column of average sales for each of the zip codes we found 
 -- from the previous query. We name the results "avg_spend_55405". Additionally, we join two CTEs to append
 -- the columns holding the average sales for the two zips that are not 55405. 
 
@@ -101,7 +101,7 @@ GROUP BY oym.card_no,month
 
 -- Query 6 
 -- We add a column named total_spend which holds the total spend across all years and months. We use 
--- a CTE to calculate the total sales and Join that to our previous query. We delete the temporary table 
+-- a CTE to calculate the total sales and join that to our previous query. We delete the temporary table 
 -- if it exists. 
 
 DROP TABLE IF EXISTS owner_year_month_2
@@ -127,7 +127,7 @@ FROM owner_year_month_2
 -- Query 7
 -- We use "owner_spend_date" table and create a view with total amount spent by owner, the average spend per
 -- transaction, number of dates they have shopped, the number of transactions they have, and the date of their 
--- last visit. Our view is named "vw_owner_recent"
+-- last visit. Our view is named "vw_owner_recent".
 
  DROP VIEW IF EXISTS vw_owner_recent;
  CREATE VIEW vw_owner_recent AS
@@ -149,7 +149,7 @@ WHERE 5 < total_trans AND
  
 -- Query 8 
 -- We create a table in our database. We build our view in the table called "owner_recent" and add an additional column. 
--- The new column called last_spend is the amount spent on the date of that last visit. 
+-- The new column called "last_spend" is the amount spent on the date of that last visit. 
 
 DROP TABLE IF EXISTS owner_recent;
 CREATE TEMPORARY TABLE owner_recent AS
@@ -194,12 +194,12 @@ ORDER BY (last_spend - avg_spend_trans/2) ASC
        
 -- Query 10
 -- This query returns the columns from "owner_recent" for owners who meet the following criteria:
--- 1. The have non-null, non-blank zips and they do not live in the Wedge or adjacent zip codes.
+-- 1. The have non-null, non-blank zip codes and they do not live in the Wedge or adjacent zip codes.
 -- 2. Their last spend was less than half their average spend.
 -- 3. Their total spend was at least $5,000.
 -- 4. They have at least 100 shopping dates.
 -- 5. Their last visit was at least 60 days before 2017-01-31.
--- 6. Their last visit was over $10
+-- 6. Their last visit was over $10.
 -- We include the owner's zip code in our query results. The results are ordered by the drop in spend, 
 -- from the largest drop to smallest, and total spend.
 
